@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    body{
+        background-color: red;
+    }
+    li{
+        list-style: none;
+    }
+    .m1{
+        /*height: 300px;*/
+        width: 100%;
+        background-color: rgb(0, 179, 255);
+        display: flex;
+    }
+    .m2{
+        width: 15%;
+    }
+    .m2 li{
+        /* 不换行 */
+        white-space: nowrap;
+        /* 超出文字长度... */
+        text-overflow:ellipsis;
+        /* 超出范围隐藏 */
+        overflow: hidden;
+        line-height: 30px;
+        text-align: center;
+    }
+    .m3{
+       
+       line-height: 30px;
+        width: 100%;
+        background-color: white;
+        margin-left: 10px;
+        text-indent: 10px;
+    }
+    .m5{
+        width: 85%;
+        background-color: azure;
+       
+    }
+    .m4{
+        /* height: 200px; */
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+    .h4{
+        width: 40%;
+        line-height: 30px;
+        text-align: center;
+        background-color: blue;
+       /*border: 1px solid #000;*/
+        box-sizing: border-box;
+        margin-left: 10px;
+        margin-top: 5px;
+        
+        
+    }
+    .m2 li.select{
+        color: rgb(29, 15, 231);
+        background-color: azure;
+    }
+    .trc{
+      height: 200px;
+      width: 100%;
+      background-color: aquamarine;
+
+    }
+</style>
+</head>
+<body>
+    <div class="m1">
+        <div class="m2">
+           <ul>
+              <li>比赛</li>
+              <li>备选</li>
+              <li>决赛</li>
+              <li class="select">开幕式</li>
+              <li>训练</li>
+              <li>重点</li>
+           </ul>
+          </div>
+          <div class="m5">
+              <div class="m4">
+              </div>
+          </div>
+      </div> 
+      <div class="trc">dfghj</div>
+  
+</body>
+<!-- <script src="./jquery-3.6.4.min.js"></script> -->
+<script>
+    $(function(){
+        // $(".m2").on("click","li",function(){
+            // $(this).addClass("select").siblings().removeClass("select");
+            // console.log($(this).text());
+           // if($(this).text()=="开幕式"){
+                var html=`  <div class="m3">开幕式</div> 
+                            <div class="h4">东安湖体育公园</div>
+                            <div class="h4">1</div>
+                            <div class="h4">2</div>
+                            <div class="h4">3</div>
+                            <div class="h4">4</div>
+                            <div class="h4">5</div>`
+                $(".trc").html(html);
+            // }
+            // if($(this).text()=="比赛"){
+            //     var html=`  <div class="m3">比赛</div> 
+            //                 <div class="h4">四川体育馆</div>
+            //                 <div class="h4">电子科技大学</div>
+            //                 <div class="h4">四川大学华西校区</div>
+            //                 <div class="h4">西南财经大学</div>
+            //                 <div class="h4">北京大学</div>
+            //                 <div class="h4">清华大学</div>`
+            //     $(".trc").html(html);
+            // }
+            // if($(this).text()=="备选"){
+            //     var html=`  <div class="m3">备选</div> 
+            //                 <div class="h4">金强国际赛事中心</div>
+            //                 <div class="h4">中医药大学</div>`
+                            
+            //     $(".trc").html(html);
+            // }
+        // })
+    
+    })
+    
+</script>
+</html>
